@@ -1,0 +1,210 @@
+body{
+    background-color: azure;
+    width: 93%;
+}
+
+#title_workout{
+    color: green;
+    font-size: xx-large;
+}
+
+label{
+    color: green;
+    font-weight: bold;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+#ex_title{
+    margin-left: 5px;
+    font-size: large;
+}
+
+.select_type{
+    font-size: medium;   
+    margin-bottom: 10px;
+}
+
+
+#ex_section{
+    font-size: medium;
+}
+
+.input_ex_lbl{
+    margin-left: 5px;
+}
+
+.duration_rest_container{
+    margin-left: 5px;
+}
+
+.text_input{
+    margin : auto;    
+    margin-right: 10px;
+    background-color: palegreen;
+    padding: 5px;
+    border: green 1px solid;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.image_button{
+    border-radius: 3px;
+    border: 2px solid green;
+    background-color: green;
+    color: white;
+    width: 100%;
+    margin-left: 5.5px;
+    margin-bottom: 10px;
+    padding: 5px;
+}
+
+#add_exercise_bt{
+    margin-bottom: 10px;
+    margin-left: 5.5px;
+    width: 100%;
+    padding: 5px;
+}
+
+@media screen and (max-device-width : 480px) {
+    #wk_table{
+        font-size: smaller;
+    }
+    #w_name{
+        font-size: small;
+    }
+    #d_name{
+        font-size: small;
+    }
+    #title_workout{
+        font-size: large;
+    }
+
+    .image_button{
+        font-size: small;
+        padding: 2px;
+    }
+
+    #add_exercise_bt{
+        font-size: small;
+        padding: 2px;
+    }
+    #ex_title{
+        /* margin-left: 5px; */
+        font-size: medium;
+    }
+
+    .select_type{
+        font-size: small;   
+        /* margin-bottom: 10px; */
+    }
+
+    #ex_section{
+        font-size: small;
+    }
+
+    #exercise_select{
+        font-size: small;
+        padding: 2px;
+    }
+
+    .tipo_ex_select{
+        padding: 2px;
+        font-size: small;
+    }
+
+    .text_dur_input_ex{
+        padding: 2px;
+        font-size: small;
+    }
+
+    #ex_table{
+        font-size: smaller;
+    }
+}
+
+table {
+    text-align: center;
+    border-collapse: collapse;
+    width: 100%;
+    margin-left: 5px;
+    margin-bottom: 10px;
+}
+  
+table, td, th {
+    border: 2px solid green;
+}
+
+th{
+    color: rgb(12, 56, 12);
+    background-color:palegreen;
+}
+
+h2{
+    color: green;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.text_dur_input_ex{
+    margin : auto;
+    margin-right: 10px;
+    background-color: palegreen;
+    padding: 5px;
+    border: green 1px solid;
+    margin-bottom: 10px;
+    width: 40px;
+}
+
+.dur_inp_bad{
+    margin : auto;
+    margin-right: 10px;
+    background-color: red;
+    padding: 5px;
+    border: black 1px solid;
+    margin-bottom: 10px;
+    width: 40px;
+}
+
+select{
+    color: rgb(12, 56, 12);    
+    border-radius: 5px;
+    border: 2px solid green;
+    background-color: palegreen;
+    padding: 4px;
+}
+
+.botone_ej{
+    margin-left: 5px;
+    margin-bottom: 10px;
+}
+
+.remove_bt{
+    border-radius: 3px;
+    border: 2px solid red;
+    background-color: red;
+    color: white;
+    padding: 2px;
+    /* width: 100%; */
+    margin-left: 5.5px;
+    margin-bottom: 10px;
+    padding: 5px;
+}
+
+.footer {
+    clear: both;
+    border-top: solid 2px green;
+    position: relative;
+    margin-top: 10px;
+    /* height: 40px; */
+    /* margin-top: -40px; */
+    padding: 10px;
+    text-align: center;
+}
+
+.footer_label{
+    color: black;
+    font-size: x-small;
+}

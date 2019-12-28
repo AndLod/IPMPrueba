@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">    
+    <script src="p3Js.js"></script>
+    <link rel="stylesheet" type="text/css" media="screen" href="p3CSS.css" />
+    <title>IPM3</title>    
+  </head>
+
+  <body onload="displayWorkoutsList()">
+    
+    <form method="POST">
+      
+      <div id="work_section">        
+        <h1 id="title_workout">Workout</h1>        
+        <label id="w_name">Name:</label>
+        <input type="text" class="text_input" id="work_name">
+        <div>
+          <label id="d_name">Description: </label>
+          <input type="text" class="text_input" id="des_name">
+        </div>
+        <input type="file" id="image_wk" hidden>
+        <button type="button" class="image_button" id="image_wk_bt" onclick="imageWorkLoad()">Select workout image</button>
+        <!-- <button type="button" id="view_workouts" onclick="displayWorkoutsList()">Show workouts</button> -->
+      </div>
+
+      <div id="addExBt_tableWork">
+        <div id="add_exercise">
+          <button type="button" id="add_exercise_bt" onclick="show_exercise()">Add Exercises</button>       
+        </div>        
+        <table id="wk_table">
+            <tr >
+              <th>Workout Name</th>
+              <th >Description</th>
+              <th>Image</th>
+            </tr>
+        </table>
+        <!-- <button type="submit">Send</button> -->
+      </div>
+      
+      <div id="ex" hidden>  <!-- Inicio Add exercise -->
+        <h2 id="ex_title">Select exercise type: </h2>     
+        
+        <div class="select_type">          
+          <label>
+            <input type="radio" id="exercise_ch" value="exercise" onclick="show_rest(this)" checked>Exercise        
+          </label>
+          <label>
+            <input type="radio" id="rest_ch" value="rest" onclick="show_rest(this)">Rest
+          </label>              
+        </div>
+
+        <div id="ex_section">
+          <div class="input_ex_lbl">
+
+            <label>Name:</label>
+            <select id="exercise_select">              
+            </select><br><br>        
+          
+            <div class="duration_container" style="display: inline;">
+              <label class="duration_label">Duration: </label>
+              <input type="number" class="text_dur_input_ex" id="ex_duration">
+              <input type="number" class="dur_inp_bad" id="ex_duration_bad" hidden>
+              
+              <select class="tipo_ex_select" id="tipo_ex">
+                <option class="option_sel" value="rep" selected> Rep</option>
+                <option value="'">Min</option>
+                <option value='"'>Sec</option>
+              </select>
+            </div>   
+          </div>
+
+          <input type="file" id="image_ex" hidden>
+          <button type="button" class="image_button" id="image_ex_bt" onclick="imageEXLoad()">Select exercise image</button>
+
+          <div class="botone_ej">
+            <button type="button" onclick="add_ex()"> Add</button>
+            <button type="button" class="remove_bt" onclick="delete_last()"> Remove</button>              
+          </div>     
+        </div>
+        
+        <div id="rest_section" hidden>
+          <div class="duration_rest_container">
+            <label class="duration_label">Duration: </label>
+            <input type="number" class="text_dur_input_ex" id="rest_duration">
+            <select class="tipo_ex_select" id="tipo_ex_rest">
+              <option value="'">Min</option>
+              <option value='"'>Sec</option>
+            </select>  
+          </div>
+                      
+          <div class="botone_ej">
+            <button type="button" onclick="add_rest()"> Add</button>
+            <button type="button" class="remove_bt" onclick="delete_last()"> Remove</button>
+          </div>
+        </div>          
+
+        <div>
+          <table id="ex_table">
+            <tr>
+              <th>Exercise Name</th>
+              <th>Duration</th>
+              <th>Image</th>
+            </tr>
+          </table>
+          <p>
+            <button type="submit" id="create_workout" onclick="add_workout()">Create</button>                
+            <button type="reset" id="cancel" onclick="show_exercise()">Cancel</button>
+          </p>
+        </div>
+      </div> <!-- Fin Add exercise -->
+
+    </form>
+
+    <div class ="footer">
+      <label class="footer_label">Interfaces Persona Máquina</label><br>
+      <label class="footer_label">Copyright © 2019 Andrés Lodeiro & Irene Domíngez</label>
+    </div>  
+
+  </body>
+</html>

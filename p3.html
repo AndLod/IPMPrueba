@@ -28,7 +28,7 @@
 
       <div id="addExBt_tableWork">
         <div id="add_exercise">
-          <button type="button" id="add_exercise_bt" onclick="show_exercise()">Add Exercises</button>       
+          <button type="button" id="add_exercise_bt" onclick="showExercise()">Add Exercises</button>       
         </div>        
         <table id="wk_table">
             <tr >
@@ -45,10 +45,10 @@
         
         <div class="select_type">          
           <label>
-            <input type="radio" id="exercise_ch" value="exercise" onclick="show_rest(this)" checked>Exercise        
+            <input type="radio" id="exercise_ch" value="exercise" onclick="showRest(this)" checked>Exercise        
           </label>
           <label>
-            <input type="radio" id="rest_ch" value="rest" onclick="show_rest(this)">Rest
+            <input type="radio" id="rest_ch" value="rest" onclick="showRest(this)">Rest
           </label>              
         </div>
 
@@ -76,8 +76,8 @@
           <button type="button" class="image_button" id="image_ex_bt" onclick="imageEXLoad()">Select exercise image</button>
 
           <div class="botone_ej">
-            <button type="button" onclick="add_ex()"> Add</button>
-            <button type="button" class="remove_bt" onclick="delete_last()"> Remove</button>              
+            <button type="button" onclick="addEx()"> Add</button>
+            <button type="button" class="remove_bt" onclick="deleteLast()"> Remove</button>              
           </div>     
         </div>
         
@@ -92,8 +92,8 @@
           </div>
                       
           <div class="botone_ej">
-            <button type="button" onclick="add_rest()"> Add</button>
-            <button type="button" class="remove_bt" onclick="delete_last()"> Remove</button>
+            <button type="button" onclick="addRest()"> Add</button>
+            <button type="button" class="remove_bt" onclick="deleteLast()"> Remove</button>
           </div>
         </div>          
 
@@ -106,8 +106,8 @@
             </tr>
           </table>
           <p>
-            <button type="submit" id="create_workout" onclick="add_workout()">Create</button>                
-            <button type="reset" id="cancel" onclick="show_exercise()">Cancel</button>
+            <button type="submit" id="create_workout" onclick="addWorkout()">Create</button>                
+            <button type="reset" id="cancel" onclick="showExercise()">Cancel</button>
           </p>
         </div>
       </div> <!-- Fin Add exercise -->

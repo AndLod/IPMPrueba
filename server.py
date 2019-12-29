@@ -42,47 +42,47 @@ def add_workout():
 
 @app.route('/get_exercises', methods=['GET'])
 def get():
-  exercises = db.exercises
-  output = []
-  for s in   exercises.find():
-    output.append({'exerciseName' : s['name']})
-  return dumps(output)
+    exercises = db.exercises
+    output = []
+    for s in   exercises.find():
+      output.append({'exerciseName' : s['name']})
+    return dumps(output)
 
 @app.route('/get_exercises_image', methods=['GET'])
 def get_exercises_image():
-  exercises = db.exercises
-  output = []
-  for s in   exercises.find():
-    aux = []
-    aux.append({'exerciseName' : s['name']})
-    aux.append({'exerciseImage' : s['image']})
-    output.append(aux)
-  return dumps(output)
+    exercises = db.exercises
+    output = []
+    for s in   exercises.find():
+      aux = []
+      aux.append({'exerciseName' : s['name']})
+      aux.append({'exerciseImage' : s['image']})
+      output.append(aux)
+    return dumps(output)
 
 @app.route('/get_workouts_name', methods=['GET'])
 def get_workouts_name():
-  workouts = db.workouts
-  output = []
-  for s in workouts.find():
-    output.append({'workoutName' : s['name']})    
-  return dumps(output)
+    workouts = db.workouts
+    output = []
+    for s in workouts.find():
+      output.append({'workoutName' : s['name']})    
+    return dumps(output)
 
 
 @app.route('/get_workouts_description', methods=['GET'])
 def get_workouts_description():
-  workouts = db.workouts
-  output = []
-  for s in workouts.find():    
-    output.append( {'workoutDescription' : s['description']});
-  return dumps(output)
+    workouts = db.workouts
+    output = []
+    for s in workouts.find():    
+      output.append( {'workoutDescription' : s['description']});
+    return dumps(output)
 
 @app.route('/get_workouts_image', methods=['GET'])
 def get_workouts_image():
-  workouts = db.workouts
-  output = []
-  for s in workouts.find():    
-    output.append( {'workoutImage' : s['image']});
-  return dumps(output)
+    workouts = db.workouts
+    output = []
+    for s in workouts.find():    
+      output.append( {'workoutImage' : s['image']});
+    return dumps(output)
 
 
   if __name__ == "__main__":
